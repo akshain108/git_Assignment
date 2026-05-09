@@ -16,6 +16,11 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero.")
     return a / b
 
+def percentage(a, b):
+    if b == 0:
+        raise ValueError("Cannot calculate percentage with zero.")
+    return (a / b) * 100
+
 def get_number(prompt):
     while True:
         try:
