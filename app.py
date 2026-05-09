@@ -37,13 +37,14 @@ def main():
         print("2. Subtract")
         print("3. Multiply")
         print("4. Divide")
-        print("5. Exit")
+        print("5. Percentage")
+        print("6. Exit")
 
-        choice = input("Enter 1, 2, 3, 4, or 5: ").strip()
-        if choice == "5":
+        choice = input("Enter 1, 2, 3, 4, 5, or 6: ").strip()
+        if choice == "6":
             print("Thank you, See you again Bye")
             break
-        if choice not in {"1", "2", "3", "4", "5"}:
+        if choice not in {"1", "2", "3", "4", "5", "6"}:
             print("Invalid choice. Try again.")
             continue
 
@@ -62,6 +63,9 @@ def main():
         elif choice == "4":
             result = divide(x, y)
             op = "/"
+        elif choice == "5":
+            result = percentage(x, y)
+            op = "%"
         else:
             print("Invalid choice. Try again.")
             continue
