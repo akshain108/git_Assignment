@@ -30,7 +30,7 @@ def main():
 
         choice = input("Enter 1, 2, 3, or 4: ").strip()
         if choice == "4":
-            print("Goodbye!")
+            print("Thank you, See you again Bye")
             break
         if choice not in {"1", "2", "3"}:
             print("Invalid choice. Try again.")
