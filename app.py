@@ -8,6 +8,8 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+def multiply(a, b):
+    return a * b
 
 def get_number(prompt):
     while True:
@@ -18,18 +20,19 @@ def get_number(prompt):
 
 
 def main():
-    print("Calculator: addition and subtraction")
+    print("Calculator: addition, subtraction, and multiplication")
     while True:
         print("\nChoose an option:")
         print("1. Add")
         print("2. Subtract")
-        print("3. Exit")
+        print("3. Multiply")
+        print("4. Exit")
 
-        choice = input("Enter 1, 2, or 3: ").strip()
-        if choice == "3":
+        choice = input("Enter 1, 2, 3, or 4: ").strip()
+        if choice == "4":
             print("Goodbye!")
             break
-        if choice not in {"1", "2"}:
+        if choice not in {"1", "2", "3"}:
             print("Invalid choice. Try again.")
             continue
 
@@ -39,9 +42,12 @@ def main():
         if choice == "1":
             result = add(x, y)
             op = "+"
-        else:
+        elif choice == "2":
             result = subtract(x, y)
             op = "-"
+        elif choice == "3":
+            result = multiply(x, y)
+            op = "*"
 
         print(f"{x} {op} {y} = {result}")
 
